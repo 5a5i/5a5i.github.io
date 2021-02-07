@@ -1,0 +1,7 @@
+User-Agent: *
+Disallow: /css/
+Disallow: /img/
+Disallow: /js/
+Disallow: /mail/
+Disallow: /scss/
+Disallow: /vendor/

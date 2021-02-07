@@ -1,0 +1,45 @@
+.portfolio-item{
+  pointer-events: none;
+  transform: translateZ(0);
+  border-radius: 5px;
+  margin: auto;
+  transform-style: preserve-3d;
+  backface-visibility: hidden;
+  box-shadow: 0 0 5px rgba(0,0,0,.1);
+  position: relative;
+  
+  &:after{
+    content:" ";
+    position: absolute;
+    box-shadow: 0 30px 20px rgba(0,0,0,.3);
+    
+  }
+  
+  .portfolio-caption{
+    margin: auto;
+    text-align:center;
+    transform-style: preserve-3d;
+  }
+
+  .portfolio-hover {
+    margin: auto;
+    text-align: center;
+    transform-style: preserve-3d;
+}
+  
+  h4{
+    transform: translateZ(50px);
+  }
+  p{
+    transform: translateZ(40px);
+    display: block;
+    
+    &.related{
+      transform: translateZ(45px);
+      font-style: italic;
+    }
+  }
+  a{
+    pointer-events: auto;
+  }
+}

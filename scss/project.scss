@@ -1,0 +1,119 @@
+.project{
+	width: 100%;
+	float: left;
+	padding: 15px;
+	
+	&-list{
+		&:after{
+			content :" ";
+			display : block;
+			clear   : both;
+		}
+	}
+
+	&__image{
+		display  : block;
+		position : relative;
+
+		img{
+			width: 100%;
+			max-width: 100%;
+			height: auto;
+			display: block;
+		}
+
+		&:after{
+			content    : " ";
+			width      : 100%;
+			height     : 100%;
+			position   : absolute;
+			left       : 0;
+			top        : 0;
+			background : linear-gradient(rgba(0,0,0,.1),rgba(0,0,0,.4));
+			transition : opacity .3s ease;
+			opacity    : 0;
+		}
+	}
+
+	&__card{
+		position    : relative;
+		transition  : box-shadow .3s ease;
+		box-shadow: 0 10px 30px rgba(0,0,0,0);
+
+		&.hover-in{
+			transition: transform .2s ease-out;
+		}
+
+		&.hover-out{
+			transition : transform .2s ease-in;
+		}
+
+	}
+
+	&:hover{
+
+		.project{
+
+			&__card{box-shadow: 0 10px 30px rgba(0,0,0,.4);}
+			&__image:after{ opacity: 1; }
+			&__detail{ 
+				border-width : 10px;
+				box-shadow   : 0 10px 30px rgba(0,0,0,.4);
+			}
+
+			&__title, &__category{
+				transform: translateY(0) scale(1);
+				opacity: 1;
+			}
+
+			&__title{
+				font-weight: 600;
+				margin-bottom: 0;
+				line-height: 1
+			}
+
+		}
+	}
+
+	&__detail{
+		position        : absolute;
+		left            : 30px;
+		right           : 30px;
+		top             : 30px;
+		bottom          : 30px;
+		display         : flex;
+		flex-direction  : column;
+		justify-content : center;
+		text-align      : center;
+		transform       : translateZ(30px);
+		border          : 0 solid #00BCD4;
+		transition      : border .4s ease;
+	}
+
+	&__title{
+		margin      : 0 0 10px;
+		font-size   : 36px;
+		font-weight : 700;
+		transition  : .4s ease;
+		opacity     : 0;
+		transform   : translateY(40px) scale(0);
+		will-change : transform;
+
+		a{
+			color: white;
+		}
+	}
+
+	&__category{
+		opacity          : 0;
+		transition       : .4s ease;
+		transition-delay : .1s;
+		transform        : translateY(40px) scale(0);
+		will-change      : transform;
+		a{
+			color     : rgba(white,.8);
+			font-size : 1.3em;
+		}
+	}
+
+}
