@@ -25,3 +25,6 @@ Homestead.yaml
 Homestead.json
 /.vagrant
 .phpunit.result.cache
+
+package.json
+package-lock.json
